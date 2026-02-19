@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pi-session-to-md"
+version = "0.1.0"
+description = "Convert pi-coding-agent session JSONL files to conversation-first Markdown"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+license = { text = "MIT" }
+authors = [
+  { name = "cgint" }
+]
+keywords = ["pi", "jsonl", "markdown", "llm", "session", "export"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Text Processing :: Markup"
+]
+
+[project.scripts]
+pi-session-to-md = "pi_session_to_md:main"
