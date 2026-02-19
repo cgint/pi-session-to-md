@@ -1,6 +1,6 @@
 # pi-session-to-md
 
-Convert a `pi-coding-agent` session JSONL file into **conversation-first Markdown**.
+Convert a [`pi-coding-agent`](https://github.com/badlogic/pi-mono) session JSONL file into **conversation-first Markdown**.
 
 This tool focuses on readable chat output (USER + ASSISTANT + optional THINKING), unlike app-shell HTML exports and unlike debug-heavy exports.
 
