@@ -198,9 +198,15 @@ def _build_id_index(records: Iterable[Dict[str, Any]]) -> Tuple[SessionMeta, Lis
     for rec in records:
         rtype = rec.get("type")
         if rtype == "session":
-            meta.session_id = rec.get("id") if isinstance(rec.get("id"), str) else meta.session_id
+            rec_id = rec.get("id")
+            if isinstance(rec_id, str):
+                meta.session_id = rec_id
+
             meta.started_at = _parse_iso(rec.get("timestamp")) or meta.started_at
-            meta.cwd = rec.get("cwd") if isinstance(rec.get("cwd"), str) else meta.cwd
+
+            rec_cwd = rec.get("cwd")
+            if isinstance(rec_cwd, str):
+                meta.cwd = rec_cwd
 
         rid = rec.get("id")
         if isinstance(rid, str) and rid:
