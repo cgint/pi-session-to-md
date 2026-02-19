@@ -6,6 +6,21 @@ This tool focuses on readable chat output (USER + ASSISTANT + optional THINKING)
 
 ---
 
+## Is this tool for me?
+
+**Use it when you want:**
+
+- clean, readable conversation transcripts for sharing
+- markdown you can paste into GitHub/GitLab discussions
+- optional inclusion of assistant thinking for deeper review
+
+**Not ideal when you want:**
+
+- pixel-accurate UI replay of the original Pi session
+- raw debugging/event logs for low-level diagnostics
+
+---
+
 ## What it does
 
 Given a Pi session file (`*.jsonl`), it produces Markdown suitable for:
@@ -36,7 +51,7 @@ It can:
 ### 1) Clone
 
 ```bash
-git clone https://github.com/<your-org>/pi-session-to-md.git
+git clone https://github.com/cgint/pi-session-to-md.git
 cd pi-session-to-md
 ```
 
@@ -116,7 +131,7 @@ The converter is tolerant and skips unknown/non-conversation record types.
 
 `--mode branch` reconstructs one chain by following `parentId` from the selected leaf back to root.
 
-This is a **best-effort approximation** of the currently selected UI branch.
+It is a **best-effort approximation** and can differ from what the UI shows in some edge cases.
 
 ---
 
