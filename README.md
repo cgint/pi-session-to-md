@@ -4,6 +4,8 @@ Convert a `pi-coding-agent` session JSONL file into **conversation-first Markdow
 
 This tool focuses on readable chat output (USER + ASSISTANT + optional THINKING), unlike app-shell HTML exports and unlike debug-heavy exports.
 
+It is built for session files produced by [`pi-mono`](https://github.com/badlogic/pi-mono).
+
 ---
 
 ## Is this tool for me?
