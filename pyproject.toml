@@ -24,3 +24,9 @@ classifiers = [
 
 [project.scripts]
 pi-session-to-md = "pi_session_to_md:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "ruff",
+]
